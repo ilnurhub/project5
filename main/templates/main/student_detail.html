@@ -29,8 +29,21 @@
             </div>
         </div>
         <div class="col-6">
-            <img src="/media/{{ object.avatar }}"/>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Предметы студента
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        {% for subject in subjects %}
+                        <li>{{ subject }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="card-footer"></div>
+            </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
